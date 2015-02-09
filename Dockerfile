@@ -50,3 +50,4 @@ ENTRYPOINT ["/usr/sbin/php5-fpm", "-F"]
 #composer create-project laravel/laravel /var/www/laravel --prefer-dist
 #chown -R :www-data /var/www/laravel
 #chmod -R 775 /var/www/laravel/storage
+####################
