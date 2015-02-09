@@ -27,7 +27,7 @@ RUN service php5-fpm restart
 ADD ./default /etc/nginx/sites-available/default
 
 # Make laravel structure
-RUN mkdir -p /var/www/laravel
+RUN mkdir -p /data/www/laravel
 
 # Restart nginx
 RUN service nginx restart
@@ -47,7 +47,7 @@ ENTRYPOINT ["/usr/sbin/php5-fpm", "-F"]
 #cd ~
 #curl -sS https://getcomposer.org/installer | php
 #mv composer.phar /usr/local/bin/composer
-#composer create-project laravel/laravel /var/www/laravel --prefer-dist
-#chown -R :www-data /var/www/laravel
-#chmod -R 775 /var/www/laravel/storage
+#composer create-project laravel/laravel /data/www/laravel --prefer-dist
+#chown -R :www-data /data/www/laravel
+#chmod -R 775 /data/www/laravel/storage
 ####################
