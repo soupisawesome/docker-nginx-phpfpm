@@ -28,6 +28,7 @@ ADD ./default /etc/nginx/sites-available/default
 
 # Make laravel structure
 RUN mkdir -p /data/www/laravel
+VOLUME ["/data"]
 
 # Restart nginx
 RUN service nginx restart
